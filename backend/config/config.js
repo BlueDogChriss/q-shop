@@ -1,4 +1,4 @@
 module.exports = {
-    ROLEs: ['USER', 'ADMIN'],
+    ROLES: ['USER', 'ADMIN'],
 }
 
