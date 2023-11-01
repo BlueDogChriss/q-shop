@@ -8,7 +8,7 @@ const controler = {
 
     //add a new user
     register: async (req, res) => {
-        
+        console.log(req);
         const newUser = {
             name: req.body.name,
             surname: req.body.surname,
@@ -22,7 +22,7 @@ const controler = {
         console.log(newUser);
 
         if (Object.keys(errors).length === 0) {
-            UserModel.create(newUser).then(() => {
+            UserDB.create(newUser).then(() => {
                 res.status(201).send({ message: "User registered successfully." })
             }).catch((err) => {
                 res.status(501).send(err);
