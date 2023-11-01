@@ -1,13 +1,12 @@
 const Sequelize = require("sequelize");
 const db = require("../config").db;
 
-const UsersModel = require("./users");
+const UserModel = require("./user");
 
-const users = UsersModel(db, Sequelize);
-
+const User = UserModel(db, Sequelize);
 
 module.exports = {
-    users,
+    User,
     connection: db,
     //files
 };
