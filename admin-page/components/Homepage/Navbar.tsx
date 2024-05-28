@@ -120,7 +120,7 @@ export const Navbar = () => {
                             </a>
                         ))}
                         <Button className="w-200 bg-violet-600">
-                            <Link href="/login">Sign In</Link>
+                            <Link href="/sign-in">Sign In</Link>
                         </Button>
                         <div className="hidden md:flex gap-2">
                             <ModeToggle />
