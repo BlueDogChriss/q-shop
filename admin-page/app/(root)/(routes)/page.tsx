@@ -16,14 +16,7 @@ const DashboardPage = () => {
         }
     },[isOpen, onOpen]);
 
-    return (
-        <div className="p-4">
-            {/* <UserButton afterSignOutUrl="/"/> */}
-            {/* <Modal title="Test" description="test desc" isOpen onClose={() => {}}> */}
-                RootPage
-            {/* </Modal> */}
-        </div>
-    );
+    return null
   }
 
 export default DashboardPage;
