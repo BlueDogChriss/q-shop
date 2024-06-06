@@ -1,9 +1,14 @@
+import { getGraphRevenue } from "@/actions/get-count-revenue";
+import { getSalesCount } from "@/actions/get-sales-count";
+import { getStockCount } from "@/actions/get-stock-count";
+import { getTotalRevenue } from "@/actions/get-total-revenue";
+import { Overview } from "@/components/Dashboard/overview";
 import { Heading } from "@/components/Heading/heading";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import prismadb from "@/lib/prismadb";
 import { formatter } from "@/lib/utils";
-import { DollarSign } from "lucide-react";
+import { Car, CreditCard, DollarSign, PackageIcon } from "lucide-react";
 
 interface DashboardPageProps{
     params: {
@@ -15,6 +20,12 @@ interface DashboardPageProps{
 const DashboardPage: React.FC<DashboardPageProps> = async({
     params
 }) => {
+
+    const totalRevenue = await getTotalRevenue(params.storeId);
+    const salesCount = await getSalesCount(params.storeId);
+    const stockCount = await getStockCount(params.storeId);
+    const graphRevenue = await getGraphRevenue(params.storeId);
+
 
 
     return (
@@ -32,11 +43,47 @@ const DashboardPage: React.FC<DashboardPageProps> = async({
                         </CardHeader>
                         <CardContent>
                             <div className="text-2xl font-bold">
-                                {formatter.format(100)}
+                                {formatter.format(totalRevenue)}
+                            </div>
+                        </CardContent>
+                    </Card>
+                    <Card>
+                        <CardHeader className="pb-2 flex flex-row items-center justify-between space-y-0">
+                            <CardTitle className="text-sm font-medium">
+                            Salese
+                            </CardTitle>
+                        <CreditCard className="h-4 w-4 text-muted-foreground"/>
+                        </CardHeader>
+                        <CardContent>
+                            <div className="text-2xl font-bold">
+                                +{salesCount}
+                            </div>
+                        </CardContent>
+                    </Card>
+                    <Card>
+                        <CardHeader className="pb-2 flex flex-row items-center justify-between space-y-0">
+                            <CardTitle className="text-sm font-medium">
+                                Products in stock
+                            </CardTitle>
+                        <PackageIcon className="h-4 w-4 text-muted-foreground"/>
+                        </CardHeader>
+                        <CardContent>
+                            <div className="text-2xl font-bold">
+                                {stockCount}
                             </div>
                         </CardContent>
                     </Card>
                 </div>
+                <Card className="col-span-4">
+                    <CardHeader>
+                        <CardTitle>
+                            Overview
+                        </CardTitle>
+                    </CardHeader>
+                    <CardContent className="pl-2">
+                        <Overview data={graphRevenue} />
+                    </CardContent>
+                </Card>
             </div>
         </div>
     );

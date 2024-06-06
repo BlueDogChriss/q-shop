@@ -13,6 +13,7 @@ import { LogoIcon } from "./Icons";
 import Image, { StaticImageData } from 'next/image'
 import Link from "next/link"
 import logo from "../assets/q-shop-logo-no-background.png"
+import { ThemeToggle } from "../ui/theme-toggle";
 
 
 interface RouteProps {
@@ -123,7 +124,7 @@ export const Navbar = () => {
                             <Link href="/sign-in">Sign In</Link>
                         </Button>
                         <div className="hidden md:flex gap-2">
-                            <ModeToggle />
+                            <ThemeToggle/>
                         </div>
                     </nav>
                 </NavigationMenuList>
