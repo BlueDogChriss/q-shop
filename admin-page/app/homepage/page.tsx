@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/Homepage/Navbar";
 import { About } from "@/components/Homepage/About";
 import { Hero } from "@/components/Homepage/Hero";
-import { Sponsors } from "@/components/Homepage/Sponsors";
 import { ScrollToTop } from "@/components/Homepage/ScrollToTop";
 import { Footer } from "@/components/Homepage/Footer";
 import { FAQ } from "@/components/Homepage/FAQ";
@@ -21,7 +20,6 @@ export default function Home() {
     <>
     <Navbar /> 
     <Hero/>
-    {/* <Sponsors/> */}
     <About />
     <HowItWorks />
     <Features />

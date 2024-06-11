@@ -1,4 +1,4 @@
-import logo from "../../public/logo-no-background.png"
+// import logo from "../../public/logo-no-background.png"
 
 export const LogoIcon = () => {
     return (

@@ -2,11 +2,11 @@
 
 import { Color, Size } from "@/types";
 import { useState } from "react";
-import Button from "../ui/button";
+import Button from "@/components/ui/button";
 import { Plus, X } from "lucide-react";
 import { Dialog } from "@headlessui/react";
-import IconButton from "../Products/icon-button";
-import Filter from "./filter";
+import IconButton from "@/components/Products/icon-button";
+import Filter from "@/components/Category/filter";
 
 interface MobileFiltersProps{
     sizes: Size[];

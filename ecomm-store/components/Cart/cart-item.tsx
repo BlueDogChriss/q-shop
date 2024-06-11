@@ -4,8 +4,8 @@ import Image from "next/image"
 import { toast } from "react-hot-toast"
 import { X } from "lucide-react";
 
-import IconButton from "../Products/icon-button";
-import Currency from "../Products/currency";
+import IconButton from "@/components/Products/icon-button";
+import Currency from "@/components/Products/currency";
 import useCart from "@/hooks/use-cart";
 import { Product } from "@/types";
 

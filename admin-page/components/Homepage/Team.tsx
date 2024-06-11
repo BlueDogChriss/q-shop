@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/card";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 import Image, { StaticImageData } from 'next/image'
-import mascot from "../assets/mascot.png"
+import mascot from "@/components/assets/mascot.png"
 
 interface TeamProps {
   image: StaticImageData;

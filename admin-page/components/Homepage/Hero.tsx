@@ -1,7 +1,7 @@
 import Link from "next/link"
-import { Button } from "../ui/button";
-import { buttonVariants } from "../ui/button";
-import { HeroCards } from "./HeroCards";
+import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
+import { HeroCards } from "@/components/Homepage/HeroCards";
 
 
 export const Hero = () => {

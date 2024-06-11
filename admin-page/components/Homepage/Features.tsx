@@ -7,9 +7,9 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Image, { StaticImageData } from 'next/image'
-import image from "../assets/learning-raccoon.png";
-import image3 from "../assets/painter-raccoon.png";
-import image4 from "../assets/looking-ahead-raccoon.png";
+import image from "@/components/assets/learning-raccoon.png";
+import image3 from "@/components/assets/painter-raccoon.png";
+import image4 from "@/components/assets/looking-ahead-raccoon.png";
 
 interface FeatureProps {
     title: string;

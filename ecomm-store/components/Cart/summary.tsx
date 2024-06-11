@@ -5,8 +5,8 @@ import { useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import { toast } from "react-hot-toast";
 
-import Button from "../ui/button";
-import Currency from "../Products/currency";
+import Button from "@/components/ui/button";
+import Currency from "@/components/Products/currency";
 import useCart from "@/hooks/use-cart";
 
 

@@ -1,6 +1,6 @@
-import { Card, CardDescription, CardHeader, CardTitle } from "../ui/card";
-import { MagnifierIcon, WalletIcon, ChartIcon } from "./Icons";
-import raccoonStanding from "../assets/raccoon-standing.png";
+import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { MagnifierIcon, WalletIcon, ChartIcon } from "@/components/Homepage/Icons";
+import raccoonStanding from "@/components/assets/raccoon-standing.png";
 import Image from 'next/image'
 
 interface ServiceProps {

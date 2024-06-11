@@ -1,10 +1,10 @@
 import { UserButton } from "@clerk/nextjs";
 import {auth} from "@clerk/nextjs/server"
 import { MainNav } from "@/components/Dashboard/main-nav";
-import StoreSwitcher from "./store-switcher";
+import StoreSwitcher from "@/components/Dashboard/store-switcher";
 import {redirect} from "next/navigation";
 import prismadb from "@/lib/prismadb";
-import { ThemeToggle } from "../ui/theme-toggle";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 
 const Navbar = async () => {

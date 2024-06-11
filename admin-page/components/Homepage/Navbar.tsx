@@ -8,12 +8,11 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/co
 
 import { Button, buttonVariants } from "../ui/button";
 import { Menu } from "lucide-react";
-import { ModeToggle } from "./mode-toggle";
-import { LogoIcon } from "./Icons";
+import { LogoIcon } from "@/components/Homepage/Icons";
 import Image, { StaticImageData } from 'next/image'
 import Link from "next/link"
-import logo from "../assets/q-shop-logo-no-background.png"
-import { ThemeToggle } from "../ui/theme-toggle";
+import logo from "@/components/assets/q-shop-logo-no-background.png"
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 
 interface RouteProps {
@@ -65,7 +64,7 @@ export const Navbar = () => {
 
                     {/* mobile */}
                     <span className="flex md:hidden">
-                        <ModeToggle />
+                        <ThemeToggle />
 
                         <Sheet
                             open={isOpen}

@@ -3,12 +3,12 @@
 import axios from "axios"
 import { toast } from "react-hot-toast"
 import { Copy, Edit, MoreHorizontal, Trash } from "lucide-react";
-import { Button } from "../ui/button";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger, DropdownMenuLabel, DropdownMenuItem } from "../ui/dropdown-menu";
-import { ProductColumn } from "./columns";
+import { Button } from "@/components/ui/button";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger, DropdownMenuLabel, DropdownMenuItem } from "@/components/ui/dropdown-menu";
+import { ProductColumn } from "@/components/Products/columns";
 import { useParams, useRouter } from "next/navigation";
 import { useState } from "react";
-import { AlertModal } from "../modals/alert-modal";
+import { AlertModal } from "@/components/modals/alert-modal";
 
 interface CellActionProps {
     data: ProductColumn
